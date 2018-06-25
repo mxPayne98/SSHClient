@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:background="@color/colorPrimaryDark"
+    android:paddingBottom="5dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".TerminalActivity"
+    tools:showIn="@layout/activity_terminal">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/esc"
+        android:layout_marginBottom="5dp">
+
+        <view
+            android:id="@+id/emulatorView"
+            class="com.paynerealm.w3sshclient.terminal.TerminalView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/keyboardButton"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:backgroundTint="#96be710c"
+        android:elevation="2dp"
+        android:src="@drawable/ic_keyboard_hide_black_24dp" />
+
+
+    <Button
+        android:id="@+id/Ctrl"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/esc"
+        android:backgroundTint="#96be710c"
+        android:text="Ctrl"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/esc"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/rightButton"
+        android:backgroundTint="#96be710c"
+        android:text="Esc"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="#ffffff" />
+
+
+    <Button
+        android:id="@+id/tab"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/keyboardButton"
+        android:backgroundTint="#96be710c"
+        android:text="Tab"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+        android:textColor="#ffffff" />
+
+
+    <ImageButton
+        android:id="@+id/leftButton"
+        android:layout_width="45dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/tab"
+        android:backgroundTint="#96be710c"
+        android:elevation="2dp"
+        android:src="@drawable/ic_arrow_back_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/upButton"
+        android:layout_width="45dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/leftButton"
+        android:backgroundTint="#96be710c"
+        android:elevation="2dp"
+        android:src="@drawable/ic_arrow_upward_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/rightButton"
+        android:layout_width="45dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/upButton"
+        android:backgroundTint="#96be710c"
+        android:elevation="2dp"
+        android:src="@drawable/ic_arrow_forward_black_24dp" />
+
+</RelativeLayout>
